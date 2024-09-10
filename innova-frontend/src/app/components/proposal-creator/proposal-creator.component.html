@@ -1,0 +1,30 @@
+<div class="content-container ">
+  <mat-card class="form-container outlined">
+    <h2>Innovationsantrag erstellen</h2>
+    <mat-card-content>
+      <form class="form">
+        <mat-form-field class="full-width">
+          <mat-label>Name Antragssteller</mat-label>
+          <input [(ngModel)]="creatorName" matInput placeholder="Max Mustermann" required name="creatorName">
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <mat-label>Titel der Innovation</mat-label>
+          <input [(ngModel)]="title" matInput placeholder="Teleportationsgerät" required name="title">
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <mat-label>Beschreibung</mat-label>
+          <textarea matInput class="input-description"
+                    placeholder="Mit diesem Gerät könnte man blitzschnell durch die Galaxie reisen..."
+                    required
+                    name="description"
+                    [(ngModel)]="description"></textarea>
+        </mat-form-field>
+
+        <button (click)="createProcessAndMakeProposal()" mat-flat-button>Innovation einreichen</button>
+      </form>
+
+    </mat-card-content>
+  </mat-card>
+</div>
